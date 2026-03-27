@@ -1,0 +1,119 @@
+.singleProject {
+  flex: 0 1 calc(33.33% - 1.5rem); /* 🔥 3 cards per row */
+  max-width: 380px;
+  min-height: 420px;
+
+  border-radius: 12px;
+  padding: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background-color: var(--cardBackground, #0f172a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+
+  color: #ffffff;
+}
+
+/* HOVER */
+.singleProject:hover {
+  transform: translateY(-6px);
+}
+
+/* CONTENT */
+.projectContent {
+  width: 100%;
+  text-align: center;
+}
+
+/* HEADING */
+.projectContent h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--primaryFont);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* IMAGE */
+.projectContent img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* OVERLAY */
+.singleProject::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.singleProject:hover::before {
+  opacity: 1;
+}
+
+/* KEEP ABOVE */
+.projectContent,
+.projectDesc,
+.projectLang {
+  position: relative;
+  z-index: 2;
+}
+
+/* BUTTON */
+.projectShowcaseBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+/* DESCRIPTION */
+.projectDesc {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.4;
+  color: #e5e7eb;
+}
+
+/* TAGS */
+.projectLang {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.projectLang span {
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .singleProject {
+    flex: 0 1 calc(50% - 1rem); /* 🔥 2 cards */
+  }
+}
+
+@media (max-width: 600px) {
+  .singleProject {
+    flex: 0 1 100%; /* 🔥 1 card */
+  }
+}

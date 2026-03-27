@@ -1,0 +1,163 @@
+.education {
+  min-height: fit-content;
+}
+
+.educationBody {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: hsla(117, 56%, 49%, 0.702);
+}
+
+/* LEFT CONTENT */
+.educationDescription {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 7%;
+}
+
+.educationDescription > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CARD */
+.educationCard {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  min-height: 120px;
+  padding: 1.2rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+  transition: 0.3s;
+}
+
+.educardImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.educardImg > img {
+  width: 35px;
+}
+
+.educationDetails {
+  margin-left: 0.8rem;
+}
+
+.educationDetails > h6 {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.educationDetails > h4 {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.educationDetails > h5 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* IMAGE */
+.educationImage {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.educationImage > img {
+  width: 100%;
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media screen and (max-width: 768px) {
+  .educationBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .educationDescription {
+    margin-left: 0;
+    padding: 1rem;
+    font-weight: bold;
+    /* align-items: center;
+    text-align: center; */
+  }
+
+  .educationDescription > h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .educationCard {
+    width: 100%;
+    padding: 1rem;
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .educardImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .educardImg > img {
+    width: 25px;
+  }
+
+  .educationDetails {
+    margin-left: 0.6rem;
+  }
+
+  .educationDetails > h6 {
+    font-size: 0.8rem;
+  }
+
+  .educationDetails > h4 {
+    font-size: 0.9rem;
+  }
+
+  .educationDetails > h5 {
+    font-size: 0.9rem;
+  }
+
+  .educationImage {
+    width: 80%;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media screen and (max-width: 480px) {
+  .educationDescription > h1 {
+    font-size: 1.8rem;
+  }
+
+  .educationCard {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .educationDetails > h4 {
+    font-size: 0.9rem;
+  }
+
+  .educationDetails > h5 {
+    font-size: 0.9rem;
+  }
+}
