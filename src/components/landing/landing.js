@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import Typed from 'react-typed';
+import { TypeAnimation } from 'react-type-animation';
 import { ThemeContext } from '../../contexts/theme-context';
 import { headerData } from '../../data/header-data';
 import { socialsData } from '../../data/socials-data';
@@ -30,15 +30,17 @@ function Landing() {
             </h1>
 
             {/* DESIGNATION */}
-            <Typed
-                strings={[
+            <TypeAnimation
+                sequence={[
                     'Frontend Developer',
+                    2000,
                     'React Js Developer',
-                    'Full Stack Next Js Developer'
+                    2000,
+                    'Full Stack Next Js Developer',
+                    2000,
                 ]}
-                typeSpeed={50}
-                backSpeed={40}
-                loop
+                speed={50}
+                repeat={Infinity}
                 className="text-xl md:text-3xl mb-6 font-semibold"
                 style={{ color: theme.primary }}
             />
