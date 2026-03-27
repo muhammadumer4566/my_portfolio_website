@@ -1,12 +1,11 @@
 "use client"
-import { Container } from '@material-ui/core';
+import Container from '@mui/material/Container';
 import React, { useContext } from 'react';
 import codings from '../../assets/lottie/coding.json';
 import { ThemeContext } from '../../contexts/theme-context';
 import { aboutData } from '../../data/about-data';
 import styles from '../../styles/about.module.css';
 import AnimationLottie from '../animation';
-
 
 function About() {
 
@@ -33,4 +32,4 @@ function About() {
     )
 }
 
-export default About
+export default About;

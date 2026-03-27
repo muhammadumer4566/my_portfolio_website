@@ -1,5 +1,5 @@
 "use client"
-import { Container } from '@material-ui/core';
+import Container from '@mui/material/Container';
 import React, { useContext } from 'react';
 import education from '../../assets/lottie/education.json';
 import { ThemeContext } from '../../contexts/theme-context';
