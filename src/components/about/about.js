@@ -10,7 +10,7 @@ import AnimationLottie from '../animation';
 
 function About() {
 
-    const { theme } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext); 
     return (
         <div style={{ backgroundColor: theme.secondary }}>
             <Container className={styles.about} id="about">
